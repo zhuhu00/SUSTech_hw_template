@@ -5,31 +5,45 @@
 ]{fphw}
 
 % Template-specific packages
-\usepackage[utf8]{inputenc} % Required for inputting international characters
+\usepackage{inputenc} % Required for inputting international characters
 \usepackage[T1]{fontenc} % Output font encoding for international characters
 \usepackage{mathpazo} % Use the Palatino font
-%\usepackage{ctex} % 中文支持
-\usepackage{graphicx} % Required for including images
-
+%\usepackage{ctex}
+\usepackage{graphicx,subfigure} % Required for including images
 \usepackage{booktabs} % Required for better horizontal rules in tables
-
+\usepackage{listings}
 \usepackage{listings} % Required for insertion of code
-
+\usepackage{fontspec}
 \usepackage{enumerate} % To modify the enumerate environment
-
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathptmx}
+\usepackage{bm}
+%----------------------------------------------------------------------------------------
+\setmainfont{Times New Roman}
+%----------------------------------------------------------------------------------------
 %----------------------------------------------------------------------------------------
 %	ASSIGNMENT INFORMATION
 %----------------------------------------------------------------------------------------
-\title{Homework \#1} % Assignment title
+
+\title{Homework \#4} % Assignment title
+
 \author{NAME SID} % Student name and ID
-\date{October 17th, 2020} % Due date
+
+\date{November 12, , 2020} % Due date
+
 \institute{SOUTHERN UNIVERSITY\\OF SCIENCE AND TECHNOLOGY} % Institute or school name
+
 \class{Modern Control and Estimation (MEE 5106)} % Course or class name
+
 \professor{Prof. Wei Zhang} % Professor or teacher in charge of the assignment
 
 %----------------------------------------------------------------------------------------
 
+\setlength{\abovecaptionskip}{-0.1cm}
+\setlength{\belowcaptionskip}{0cm}   %调整图片标题与下文距离
 \begin{document}
+
 \maketitle % Output the assignment title, created automatically using the information in the custom commands above
 
 %----------------------------------------------------------------------------------------
@@ -37,75 +51,75 @@
 %----------------------------------------------------------------------------------------
 
 \section*{Question 1}
-
 \begin{problem}
-	What is the airspeed velocity of an unladen swallow?
-\end{problem}
-\begin{figure}[ht]
-    \centering
-    \includegraphics[width=0.5\columnwidth]{swallow.jpg}
-    \caption{Caption}
-    \label{fig:my_label}
-\end{figure}
-
-%------------------------------------------------
-
-\subsection*{Answer}
-
-While this question leaves out the crucial element of the geographic origin of the swallow, according to Jonathan Corum, an unladen European swallow maintains a cruising airspeed velocity of \textbf{11 metres per second}, or \textbf{24 miles an hour}. The velocity of the corresponding African swallows requires further research as kinematic data is severely lacking for these species.
-
-%----------------------------------------------------------------------------------------
-
-\section*{Question 2}
-
-\begin{problem}
-	How much wood would a woodchuck chuck if a woodchuck could chuck wood?
-	
-	\medskip
-	
-	\begin{enumerate}[(\itshape a\normalfont)] % Sub-questions styled as italic letters
-		\item Suppose ``chuck" implies throwing.
-		\item Suppose ``chuck" implies vomiting.
-	\end{enumerate}
+	\includegraphics[width=440pt]{img/q1.png}
 \end{problem}
 
 %------------------------------------------------
 
 \subsection*{Answer}
-
-\begin{enumerate}[(\itshape a\normalfont)] % Sub-questions styled as italic letters
-	\item According to the Associated Press (1988), a New York Fish and Wildlife technician named Richard Thomas calculated the volume of dirt in a typical 25--30 foot (7.6--9.1 m) long woodchuck burrow and had determined that if the woodchuck had moved an equivalent volume of wood, it could move ``about \textbf{700 pounds (320 kg)} on a good day, with the wind at his back".
+\begin{enumerate}[(\itshape a\normalfont)]
+    \item From the Question 1(a), we have the $P(S_A)=0.8$ and $P(S_B)=0.6$, the $S_A$ and $S_B$ make decisions independently means that $P(S_AS_B)=P(S_A)P(S_B)$, So we have all the possible outcomes are $S_AS_B, \bar{S_A}S_B, S_A\bar{S_B}, \bar{S_A}\bar{S_B}$, the notation $\bar{S_A}$ means $S_A$ does not accept the offer. And the probability mass function of those outcomes are :
+    \begin{equation}\nonumber
+        \begin{array}{c}
+        P(S_AS_B)=P(S_A)P(S_B)=0.48 \\
+        P(S_A\bar{S_B})=P(S_A)P(\bar{S_B})=0.32\\
+        P(\bar{S_A}S_B)=P(\bar{S_A})P(S_B)=0.12\\
+        P(\bar{S_A}\bar{S_B})=P(\bar{S_A})P(\bar{S_B})=0.08
+    \end{array}   
+    \end{equation}
     
-	\item A woodchuck can ingest 361.92 cm\textsuperscript{3} (22.09 cu in) of wood per day. Assuming immediate expulsion on ingestion with a 5\% retainment rate, a woodchuck could chuck \textbf{343.82 cm\textsuperscript{3}} of wood per day.
+    \item From the Question 1(b), we can get the probability of $P(S_A|S_B)=1$, $P(S_A|\bar{S_B})=0.3$ and $P(\bar{S_A}\bar{S_B})=0.35$. From the \textbf{Conditional probability's} definition
+    \begin{equation}\nonumber
+        P(A|B) = \frac{P(AB)}{P(B)}
+    \end{equation}
 \end{enumerate}
-
 %----------------------------------------------------------------------------------------
-
-\section*{Question 3}
-
+\clearpage
+\section*{Question 2}
 \begin{problem}
-	Identify the author of Equation \ref{eq:bayes} below and briefly describe it in Latin.
-	
-	\medskip
-	
+	\includegraphics[width=440pt]{img/q2.png}
+\end{problem}
+
+%------------------------------------------------
+
+\subsection*{Answer}
+\begin{enumerate}[(\itshape a\normalfont)] % Sub-questions styled as italic letters
+	\item ssssIdentify the author of Equation below and briefly describe it in Latin.
 	\begin{equation}\label{eq:bayes}
 		P(A|B) = \frac{P(B|A)P(A)}{P(B)}
 	\end{equation}
-	
-	\smallskip
+\end{enumerate}
+
+%----------------------------------------------------------------------------------------
+\clearpage
+\section*{Question 3}
+\begin{problem}
+    \includegraphics[width=440pt]{img/q3_1.png}\\
+    \includegraphics[width=440pt]{img/q3_2.png}
 \end{problem}
 
 %------------------------------------------------
 
 \subsection*{Answer} 
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent porttitor arcu luctus, imperdiet urna iaculis, mattis eros. Pellentesque iaculis odio vel nisl ullamcorper, nec faucibus ipsum molestie. Sed dictum nisl non aliquet porttitor. Etiam vulputate arcu dignissim, finibus sem et, viverra nisl. Aenean luctus congue massa, ut laoreet metus ornare in. Nunc fermentum nisi imperdiet lectus tincidunt vestibulum at ac elit. Nulla mattis nisl eu malesuada suscipit.
+\begin{enumerate}[(\itshape a\normalfont)]
+    \item sss 
+\end{enumerate}
 
 %----------------------------------------------------------------------------------------
-
-\section*{Question 4 (bonus marks)}
+\clearpage
+\section*{Question 4}
 
 \begin{problem}
+    \includegraphics[width=440pt]{img/q4.png}
+\end{problem}
+
+%------------------------------------------------
+
+\subsection*{Answer}
+\begin{enumerate}[(\itshape a\normalfont)]
+    \item sss 
+\end{enumerate}
 	The table below shows the nutritional consistencies of two sausage types. Explain their relative differences given what you know about daily adult nutritional recommendations.
 	
 	\bigskip
@@ -126,18 +140,11 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent porttitor arcu
 	\end{center}
 	
 	\medskip
-\end{problem}
 
-%------------------------------------------------
-
-\subsection*{Answer}
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent porttitor arcu luctus, imperdiet urna iaculis, mattis eros. Pellentesque iaculis odio vel nisl ullamcorper, nec faucibus ipsum molestie. Sed dictum nisl non aliquet porttitor. Etiam vulputate arcu dignissim, finibus sem et, viverra nisl. Aenean luctus congue massa, ut laoreet metus ornare in. Nunc fermentum nisi imperdiet lectus tincidunt vestibulum at ac elit. Nulla mattis nisl eu malesuada suscipit.
 
 %----------------------------------------------------------------------------------------
-
-\section*{Question 5 (bonus marks)}
-
+\clearpage
+\section*{Question 5}
 \begin{problem}
 	\lstinputlisting[
 		caption=Luftballons Perl Script, % Caption above the listing
@@ -147,11 +154,11 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent porttitor arcu
 		showstringspaces=false, % Don't put marks in string spaces
 		numbers=left, % Line numbers on left
 		numberstyle=\tiny, % Line numbers styling
-	]{code.pl}
+	]{code/code.m}
 	
 	\begin{enumerate}
-		\item How many luftballons will be output by the Listing \ref{lst:luftballons} above?
-		\item Identify the regular expression in Listing \ref{lst:luftballons} and explain how it relates to the anti-war sentiments found in the rest of the script.
+		\item How many luftballons will be output by the Listing above?
+		\item Identify the regular expression in Listing  and explain how it relates to the anti-war sentiments found in the rest of the script.
 	\end{enumerate}
 
 \end{problem}
