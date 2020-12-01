@@ -8,7 +8,7 @@
 \usepackage[utf8]{inputenc} % Required for inputting international characters
 \usepackage[T1]{fontenc} % Output font encoding for international characters
 \usepackage{mathpazo} % Use the Palatino font
-\usepackage{ctex}
+%\usepackage{ctex} % 中文支持
 \usepackage{graphicx} % Required for including images
 
 \usepackage{booktabs} % Required for better horizontal rules in tables
@@ -20,23 +20,16 @@
 %----------------------------------------------------------------------------------------
 %	ASSIGNMENT INFORMATION
 %----------------------------------------------------------------------------------------
-
 \title{Homework \#1} % Assignment title
-
 \author{NAME SID} % Student name and ID
-
 \date{October 17th, 2020} % Due date
-
 \institute{SOUTHERN UNIVERSITY\\OF SCIENCE AND TECHNOLOGY} % Institute or school name
-
 \class{Modern Control and Estimation (MEE 5106)} % Course or class name
-
 \professor{Prof. Wei Zhang} % Professor or teacher in charge of the assignment
 
 %----------------------------------------------------------------------------------------
 
 \begin{document}
-
 \maketitle % Output the assignment title, created automatically using the information in the custom commands above
 
 %----------------------------------------------------------------------------------------
@@ -48,9 +41,12 @@
 \begin{problem}
 	What is the airspeed velocity of an unladen swallow?
 \end{problem}
-\begin{center}
-	\includegraphics[width=0.5\columnwidth]{swallow.jpg} % Example image
-\end{center}
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.5\columnwidth]{swallow.jpg}
+    \caption{Caption}
+    \label{fig:my_label}
+\end{figure}
 
 %------------------------------------------------
 
@@ -151,7 +147,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent porttitor arcu
 		showstringspaces=false, % Don't put marks in string spaces
 		numbers=left, % Line numbers on left
 		numberstyle=\tiny, % Line numbers styling
-	]{luftballons.pl}
+	]{code.pl}
 	
 	\begin{enumerate}
 		\item How many luftballons will be output by the Listing \ref{lst:luftballons} above?
