@@ -4,3 +4,6 @@
 作业尽量用latex来写，也锻炼一下自己
 
 - 如使用online的方式写latex，可将本模板下载为.zip压缩包格式，在[sharelatex](https://sharelatex.cra.moe)或者[overleaf](https://www.overleaf.com)等网站创建时选择上传自己的模板，就可以使用了,需要将编译部分为格式`xlatex`，而不是`pdflatex`
+
+
+有问题请联系：zhuh2020@mail.sustech.edu.cn
