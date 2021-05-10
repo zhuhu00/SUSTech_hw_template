@@ -22,8 +22,21 @@
 \usepackage{bm}
 %----------------------------------------------------------------------------------------
 \setmainfont{Times New Roman}
-% 代码块
-\lstset{language=Python}
+
+% 代码模板
+\lstdefinestyle{mystyle}{
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    tabsize=4
+}
+\lstset{style=mystyle}
+% 使用方法：\lstinputlisting[language=Python]{code/a2.py}
 %----------------------------------------------------------------------------------------
 %	ASSIGNMENT INFORMATION
 %----------------------------------------------------------------------------------------
@@ -31,7 +44,7 @@
 \title{Homework \#5} % Assignment title
 \author{Zhang San, 张三 156413(xuehao)} % Student name and ID
 \date{November 12, , 2020} % Due date
-\includegraphics[scale=0.75]{img/logo2.png}
+\includegraphics[scale=0.75]{img/logo.png}
 %\institute{SOUTHERN UNIVERSITY\\OF SCIENCE AND TECHNOLOGY} % Institute or school name
 \class{Modern Control and Estimation } % Course or class name
 \professor{Prof. San } % Professor or teacher in charge of the assignment
