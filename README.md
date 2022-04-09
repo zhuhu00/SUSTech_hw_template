@@ -1,5 +1,7 @@
 # SUSTech_hw_template
+SUSTech其他Latex模版：[https://github.com/SUSTC/latex-template](https://github.com/SUSTC/latex-template)
 南方科技大学latex作业模板
+
 - 可换图片来定制
 - 如使用`online`的方式写`latex`，可将本模板下载为.zip压缩包格式，在[sharelatex](https://sharelatex.cra.moe)或者[overleaf](https://www.overleaf.com)等网站创建时选择上传自己的模板，就可以使用了,需要将编译部分为格式`XeLaTex`，而不是`pdflatex`
 - 那就冲吧！！
