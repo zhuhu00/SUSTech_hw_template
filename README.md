@@ -1,4 +1,4 @@
-# SUSTech_hw_template[GitHub last commit](https://img.shields.io/github/last-commit/zhuhu00/SUSTech_hw_template)
+# SUSTech_hw_template [GitHub last commit](https://img.shields.io/github/last-commit/zhuhu00/SUSTech_hw_template)
 SUSTech其他Latex模版：[https://github.com/SUSTC/latex-template](https://github.com/SUSTC/latex-template)
 
 # 南方科技大学latex作业模板
